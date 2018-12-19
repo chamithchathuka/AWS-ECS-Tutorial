@@ -17,8 +17,10 @@ public class SampleController {
         requestC++;
 
         if (container == null || container.equals("")) {
-            container = param1;
-            System.out.println("first time param "+param1);
+            UUID uuid = UUID.randomUUID();
+            String randomUUIDString = uuid.toString();
+
+            container= randomUUIDString;
         }
 
         System.out.println("first time container "+container);
